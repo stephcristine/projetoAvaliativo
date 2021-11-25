@@ -1,3 +1,4 @@
+//Função para verificação de preenchimento de formulário
 function verificar(){
 
   var nome = document.getElementById('nome').value; 
