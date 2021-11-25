@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-   <head>
-	<title>FORMULÁRIO</title>
-	<link rel="stylesheet" type="text/css" href="_css/stilo.css">
-	<meta charset="utf-8">
-     <script src="validacao.js"></script> 
-   </head>
+    <head>
+    	<title>FORMULÁRIO</title>
+    	<link rel="stylesheet" type="text/css" href="_css/stilo.css">
+    	<meta charset="utf-8">
+        <script src="validacao.js"></script> 
+    </head>
     <body>
 
     	<h1>FORMULÁRIO</h1>
-        <form method="POST" action="../controllerPhp/cadastrar.php" onsubmit="return (verificar() )" name="frmEnviar">
+        <form method="POST">
           <center>
 
              <!--Nome-->
@@ -22,7 +22,7 @@
 
              <!--Telefone-->
 	         <p>Fone</p>
-	         <input type="text" name="Fone" id="fone" class="form-control" onblur="maskfone(this)" onkeypress="return envent.charCode>=48 && event.charCode<=57"   maxlength="12" placeholder="Ex: (xx) xxxxx-xxxx" >
+	         <input type="text" name="Fone" id="fone" class="form-control" onblur="maskFone()" onkeypress="return envent.charCode>=48 && event.charCode<=57"   maxlength="11" placeholder="Informe seu telefone">
              
              <!--CPF-->
 	         <p>CPF</p>
@@ -30,11 +30,11 @@
              
              <!--Rua-->
              <p>Rua</p>
-             <input type="text" name="Rua" id="Rua" class="form-control" placeholder="Ex:">
+             <input type="text" name="Rua" id="Rua" class="form-control" placeholder="Ex: Rua Santos">
 
              <!--bairro -->
              <p>Bairro</p>
-             <input type="text" name="bairro" id="bairro" class="form-control" placeholder="Ex:">
+             <input type="text" name="bairro" id="bairro" class="form-control" placeholder="Ex: Heimtal">
 
              <!--Cidade-->
              <p>Cidade</p>
@@ -49,13 +49,13 @@
              <input type="text" name="numero da casa" id="numero da casa" class="form-control" placeholder="Ex:223">
 
           	 <!--Complemento-->
-          	 <P>Complemento</P>
-             <input type="text" name="complemento" id="complemento" class="form-control" placeholder="Ex:">
+          	 <p>Complemento</p>
+             <input type="text" name="complemento" id="complemento" class="form-control" placeholder="Complemento">
 	          <br>
 	          <br>
 	         <button class="btn btn-primary" name="cadastrar" onclick="verificar()" style="background-color: #4E3CF0">Cadastrar</button> 
 	       </center>
-        </form >
+        </form>
         <br>
         <a href="inicio.html" style="color: white; font-size: x-large; ">Início</a>
         <br>
