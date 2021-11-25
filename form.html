@@ -3,31 +3,61 @@
    <head>
 	<title>FORMULÁRIO</title>
 	<link rel="stylesheet" type="text/css" href="_css/stilo.css">
+	<meta charset="utf-8">
+     <script src="validacao.js"></script> 
    </head>
     <body>
+
     	<h1>FORMULÁRIO</h1>
-        
-        <form>
+        <form method="POST" action="../controllerPhp/cadastrar.php" onsubmit="return (verificar() )" name="frmEnviar">
           <center>
+
+             <!--Nome-->
 	         <p>Nome</p>
-	         <input type="text" name="Nome" placeholder="nome" />
+	         <input type="text" name="Nome" id="nome" class="form-control" placeholder="Informe seu nome" >
+
+             <!--E-mail-->
 	         <p>E-mail</p>
-	         <input type="E-mail" name="E-mail" placeholder="Ex: email@gmail.com" />
-	         <p>Celular</p>
-	         <input type="Celular" maxlength="12" placeholder="Ex: (xx) xxxxx-xxxx" />
+	         <input type="E-mail" name="E-mail" id="email" class="form-control" placeholder="Informe seu E-mail" >
+
+             <!--Telefone-->
+	         <p>Fone</p>
+	         <input type="text" name="Fone" id="fone" class="form-control" onblur="maskfone(this)" onkeypress="return envent.charCode>=48 && event.charCode<=57"   maxlength="12" placeholder="Ex: (xx) xxxxx-xxxx" >
+             
+             <!--CPF-->
 	         <p>CPF</p>
-	         <input type="password" maxlength="11" placeholder="Ex: xxx.xxx.xxx.xx" />
-	         <p>Assunto</p>
-	         <input type="text" name="assunto" placeholder="Assunto" />
-	         <p>Descrição</p>
-	         <input type="text" name="descrição" placeholder="Descrição" />
+             <input type="text" name="CPF" id="cpf" class="form-control" maxlength="11" placeholder="informe seu CPF" >
+             
+             <!--Rua-->
+             <p>Rua</p>
+             <input type="text" name="Rua" id="Rua" class="form-control" placeholder="Ex:">
+
+             <!--bairro -->
+             <p>Bairro</p>
+             <input type="text" name="bairro" id="bairro" class="form-control" placeholder="Ex:">
+
+             <!--Cidade-->
+             <p>Cidade</p>
+             <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Ex:Londrina">
+
+             <!--Estado-->
+             <p>Estado</p>
+             <input type="text" name="Estado" id="estado" class="form-control" placeholder="Ex:PR">
+          
+             <!--Número da casa-->
+             <p>Número da casa</p>
+             <input type="text" name="numero da casa" id="numero da casa" class="form-control" placeholder="Ex:223">
+
+          	 <!--Complemento-->
+          	 <P>Complemento</P>
+             <input type="text" name="complemento" id="complemento" class="form-control" placeholder="Ex:">
 	          <br>
 	          <br>
-	         <input type="submit" name="Enviar" style="background-color: #ba0404"> 
-          </center>
+	         <button class="btn btn-primary" name="cadastrar" onclick="verificar()" style="background-color: #4E3CF0">Cadastrar</button> 
+	       </center>
         </form >
         <br>
-        <a href="index.html" style="color: red; font-size: x-large; ">Início</a>
+        <a href="inicio.html" style="color: white; font-size: x-large; ">Início</a>
         <br>
     </body>
 </html>
